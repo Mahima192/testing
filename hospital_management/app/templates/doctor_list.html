@@ -1,0 +1,22 @@
+<!-- doctor_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <!-- Doctor List Section -->
+        <div class="row">
+            <div class="col-md-7 mx-auto p-3 form-container">
+                <h2 class="text-white bg-dark text-center p-3" style="font-family: 'Garamond'; border: 2px solid white; padding: 10px;">
+                    Doctor List
+                </h2>
+                <ul class="list-group">
+                    {% for doctor in doctors %}
+                        <!-- Display Doctor Information Here -->
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'doctor_add' %}" class="btn btn-success text-light mt-3" style="font-family: 'Garamond'; font-weight: bold;">Add Doctor</a>
+            </div>
+        </div>
+        <!-- End Doctor List Section -->
+    </div>
+{% endblock %}
